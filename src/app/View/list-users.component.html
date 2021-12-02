@@ -2,7 +2,7 @@
   <div class="searchByUsername" >
     <mat-form-field appearance="outline" class="filterInput">
       <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Filter table" #input>
+      <input matInput style="color: #fff" (keyup)="applyFilter($event)" placeholder="Filter table" #input>
     </mat-form-field>
     <button mat-raised-button color="primary" class="btnSeeAll" (click)="getUsers()" *ngIf="!isPublic">See All</button>
     <button mat-raised-button color="primary" class="btnSeeAll" routerLink="/create-user" *ngIf="!isPublic">Add</button>
