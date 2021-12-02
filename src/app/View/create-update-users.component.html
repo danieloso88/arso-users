@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h2>{{ title }}
+            <div *ngIf="loading" class="spinner-border" role="status" style="float: right;">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </h2>
+
+          <span *ngIf="submitted && createUser.invalid" class="badge-danger">Todos los campos son obligatorios</span>
+          <form class="mt-4" [formGroup]="createUser" (ngSubmit)="addEditUser()">
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Name</mat-label>
+                  <input matInput formControlName="name">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Username</mat-label>
+                  <input matInput formControlName="username">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="email">
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Birthday</mat-label>
+                  <input matInput [matDatepicker]="pickerBDate" formControlName="birthday">
+                  <mat-datepicker-toggle matSuffix [for]="pickerBDate"></mat-datepicker-toggle>
+                  <mat-datepicker #pickerBDate></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <button  mat-raised-button color="warn" class="btn btn-dark btn-lg" style="float: right;" routerLink="/list-users">Cancel
+                </button>
+              </div>
+
+              <div class="col">
+
+                <button  mat-raised-button color="primary" type="submit" class="btn btn-success btn-lg" style="float: left;">
+                  {{ btnAddUpd }}
+                </button>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

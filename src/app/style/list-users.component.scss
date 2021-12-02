@@ -1,0 +1,48 @@
+i {
+  cursor: pointer;
+}
+/* Structure */
+table {
+  width: 100%;
+}
+
+.filterInput {
+  font-size: 14px;
+  width: 30%;
+  float: left;
+  margin-left: 8px;
+}
+.searchDiv{
+  float: right;
+  width: 30%;
+
+  margin-left: 8px;
+}
+.inputSearchByUsername{
+  font-size: 14px;
+  width: 70%;
+ color: #fff;
+  float: left;
+}
+.btnSearch{
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 14px;
+  font-size: 14px;
+  width: 20%;
+
+  float: right;
+}
+.btnSeeAll{
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 14px;
+    font-size: 14px;
+    float: left;
+}
+
+.container{
+  padding: 20px;
+  height: 100%;
+  background-color: black;
+}

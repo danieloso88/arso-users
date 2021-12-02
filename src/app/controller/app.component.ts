@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+declare var $: any;
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: '../View/app.component.html',
+  styleUrls: ['../style/app.component.scss']
 })
 export class AppComponent {
   title = 'arso-users';
